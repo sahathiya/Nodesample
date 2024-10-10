@@ -49,7 +49,7 @@ class Controller {
       if (todoIndex === -1) {
         reject(`No todo with id ${id}`);
       }
-      data.splice(todoIndex, 1);  // Remove from data array
+      data.splice(todoIndex, 1); 
       resolve("Todo deleted successfully");
     });
   }
