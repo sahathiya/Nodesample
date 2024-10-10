@@ -1,28 +1,28 @@
-//setimmediate
-//one
-const fs=require("fs")
-fs.readFile(__filename,()=>{
-    console.log("readfile");
+// //setimmediate
+// //one
+// const fs=require("fs")
+// fs.readFile(__filename,()=>{
+//     console.log("readfile");
     
-})
-setTimeout(()=>console.log("timeout"),0)
+// })
+// setTimeout(()=>console.log("timeout"),0)
 
 
-process.nextTick(()=>console.log("process nextTick "))
+// process.nextTick(()=>console.log("process nextTick "))
 
-Promise.resolve().then(()=>console.log("promise resolved "))
-setImmediate(()=>console.log("this is setimmediate"))
+// Promise.resolve().then(()=>console.log("promise resolved "))
+// setImmediate(()=>console.log("this is setimmediate"))
 
 
 
 //two
 
-
+setImmediate(()=>console.log("this is setimmediate")
+)
 const fs=require("fs")
 fs.readFile(__filename,()=>{
     console.log("readfile");
-    setImmediate(()=>console.log("this is setimmediate")
-)
+    
 })
 setTimeout(()=>console.log("timeout"),0)
 
